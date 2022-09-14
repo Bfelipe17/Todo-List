@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import styles from './App.module.css'
 import { Header } from './components/Header'
+import { CreateTodo } from './components/CreateTodo'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,6 +9,9 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <div className={styles.wrapper}>
+        <CreateTodo />
+      </div>
     </div>
   )
 }
