@@ -1,0 +1,46 @@
+.content {
+  margin-top: 4rem;
+}
+
+.infos {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.created {
+  color: var(--blue-500);
+  font-weight: 700;
+}
+
+.finished {
+  color: var(--purple-500);
+  font-weight: 700;
+}
+
+.infos span {
+  color: white;
+  background-color: var(--gray-400);
+  padding: 2px 8px;
+  border-radius: 50%;
+}
+
+.noTodo {
+  text-align: center;
+  padding: 4rem 0;
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+}
+
+.noTodo p {
+  color: var(--gray-300);
+  font-weight: 700;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+.noTodo span {
+  color: var(--gray-300);
+  font-size: 1rem;
+  line-height: 1.5;
+}
