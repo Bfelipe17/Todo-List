@@ -1,13 +1,28 @@
 import { Trash } from 'phosphor-react';
 import styles from './styles.module.css';
 
-export function Todo() {
+interface TodoProps {
+  content: string;
+  isCompleted: boolean;
+  onUpdateTodo: (content: string) => void;
+  onDeleteTodo: (content: string) => void;
+}
+
+export function Todo({ content, isCompleted, onUpdateTodo, onDeleteTodo }: TodoProps) {
+  function handleUpdateTodo() {
+     onUpdateTodo(content)
+  }
+
+  function handleDeleteTodo() {
+    onDeleteTodo(content)
+  }
+
   return (
     <div className={styles.todo}>
       <div className={styles.todoContent}>
-        <input type="checkbox" defaultChecked />
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus officia culpa maiores ipsum vel aliquid architecto rerum quo omnis laudantium animi, atque aperiam, saepe, similique nesciunt sed? Odio, earum necessitatibus!</p>
-        <Trash />
+        <input type="checkbox" onClick={handleUpdateTodo}/>
+        <p className={isCompleted ? styles.line : ""}>{content}</p>
+        <Trash onClick={handleDeleteTodo} />
       </div>
     </div>
   )

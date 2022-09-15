@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Header />
       <div className={styles.wrapper}>
-        <CreateTodo />
+        {/* <CreateTodo /> */}
         <Content />
       </div>
     </div>
